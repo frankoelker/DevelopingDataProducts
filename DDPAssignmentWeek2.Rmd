@@ -1,0 +1,27 @@
+---
+title: "Developing Data Products Assignment Week 2"
+author: "Frank Oelker"
+date: "18 6 2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+Create a web page using R Markdown that features a map created with Leaflet. 
+
+Host your webpage on either GitHub Pages, RPubs, or NeoCities.
+
+Your webpage must contain the date that you created the document, and it must contain a map created with Leaflet. We would love to see you show off your creativity! 
+
+```{r leaflet}
+library(leaflet)
+map <- leaflet() %>%
+  addTiles() %>%
+  addMarkers(lat=39.328888, lng=-76.620277, popup="Johns Hopkins University") %>%
+  addMarkers(lat=51,202465, lng=10,382203, popup = "Germany")
+map
+```
